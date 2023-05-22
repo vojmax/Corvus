@@ -4,13 +4,21 @@ import Logo from "./Logo";
 
 function NavBar() {
 	return (
-		<header className="flex items-center justify-between w-full px-32 py-8 font-medium">
+		<header className="fixed z-50 flex items-center backdrop-blur-lg  justify-between w-full px-32 py-8 font-medium border-b text-white">
 			<Logo />
 			<nav>
-				<Link href="/">Home</Link>
-				<Link href="/projects">Projects</Link>
-				<Link href="/services">Services</Link>
-				<Link href="/contact">Contact</Link>
+				<Link className="px-4" href="/">
+					Home
+				</Link>
+				<Link className="px-4" href="/projects">
+					Projects
+				</Link>
+				<Link className="px-4" href="/services">
+					Services
+				</Link>
+				<Link className="px-4" href="/contact">
+					Contact
+				</Link>
 			</nav>
 		</header>
 	);
