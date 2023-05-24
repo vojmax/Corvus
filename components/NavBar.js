@@ -21,13 +21,13 @@ function NavBar() {
 				<CustomLink href="/projects" title="Projects" />
 				<CustomLink href="/services" title="Services" />
 				<CustomLink href="/contact" title="Contact" />
+				<button
+					className=" bg-gray-500 bg-opacity-30  items-center justify-center rounded-full p-1.5 "
+					onClick={() => setMode(mode === "light" ? "dark" : "light")}
+				>
+					{mode === "dark" ? <SunIcon /> : <MoonIcon />}
+				</button>
 			</nav>
-			<button
-				className=" bg-gray-500 bg-opacity-30  items-center justify-center rounded-full p-1.5 "
-				onClick={() => setMode(mode === "light" ? "dark" : "light")}
-			>
-				{mode === "dark" ? <SunIcon /> : <MoonIcon />}
-			</button>
 		</header>
 	);
 }
