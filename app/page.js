@@ -1,16 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-
-export default function Home() {
+function Home() {
 	return (
-		<main>
-			<Image
-				className="opacity-80"
-				src="/bg-image.jpg"
-				width={2000}
-				height={1300}
-				alt="backdrop"
-			/>
+		<main className="flex h-screen bg-light text-center justify-center items-center  dark:bg-dark dark:text-light ">
+			<h1>Home</h1>
 		</main>
 	);
 }
+
+export default Home;

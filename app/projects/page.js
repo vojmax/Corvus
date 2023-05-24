@@ -1,7 +1,9 @@
-import React from "react";
-
-function page() {
-	return <div>projects</div>;
+function Projects() {
+	return (
+		<main className="flex h-screen bg-light text-center justify-center items-center  dark:bg-dark dark:text-light ">
+			<h1>Projects</h1>
+		</main>
+	);
 }
 
-export default page;
+export default Projects;
