@@ -1,11 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 function Logo() {
 	return (
-		<Link href="/" className="flex   w-16 h-16 bg-transparent">
-			<Image src="/icon.svg" aria-label="Corvus logo" width={46} height={46} />
+		<Link href="/" className="flex items-center text-dark dark:text-light">
+			<span className=" text-2xl font-bold">corvus</span>
+			<span className="text-highlight text-2xl font-bold ">.</span>
+			<span className=" text-2xl font-normal">design</span>
 		</Link>
 	);
 }
