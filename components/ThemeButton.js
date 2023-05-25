@@ -15,23 +15,23 @@ export default function ThemeButton() {
 	if (!mounted) return null;
 	const currentTheme = theme === "system" ? systemTheme : theme;
 
-	return (
-		<>
-			{currentTheme === "dark" ? (
-				<button
-					className="bg-black-700 hover:bg-black w-10 rounded-md   p-1"
-					onClick={() => setTheme("light")}
-				>
-					<SunIcon />
-				</button>
-			) : (
-				<button
-					className="bg-gray-100 w-10 rounded-md p-1 hover:bg-gray-300"
-					onClick={() => setTheme("dark")}
-				>
-					<MoonIcon />
-				</button>
-			)}
-		</>
-	);
+	if (currentTheme === "dark") {
+		return (
+			<button
+				className="bg-black-700 hover:bg-black w-10 rounded-md   p-1"
+				onClick={() => setTheme("light")}
+			>
+				<SunIcon />
+			</button>
+		);
+	} else {
+		return (
+			<button
+				className="bg-gray-100 w-10 rounded-md p-1 hover:bg-gray-300"
+				onClick={() => setTheme("dark")}
+			>
+				<MoonIcon />
+			</button>
+		);
+	}
 }
