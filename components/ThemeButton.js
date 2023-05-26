@@ -18,7 +18,7 @@ export default function ThemeButton() {
 	if (currentTheme === "dark") {
 		return (
 			<button
-				className="bg-black-700 hover:bg-black w-10 rounded-md   p-1"
+				className=" bg-black-700 hover:bg-black w-10 rounded-md   p-1"
 				onClick={() => setTheme("light")}
 			>
 				<SunIcon />

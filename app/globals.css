@@ -12,6 +12,53 @@ body {
 	min-width: 100vh;
 }
 
-/* @media (prefers-color-scheme: dark) {
+::-moz-selection {
+	/* Code for Firefox */
+	color: black;
+	background: #00ffae;
+}
 
-} */
+::selection {
+	color: black;
+	background: #00ffae;
+}
+
+.word {
+	display: block;
+}
+
+.word span {
+	color: #00ffae;
+	position: relative;
+}
+
+.word span::after {
+	content: "";
+	width: 8px;
+	height: 100%;
+	background: #00ffae;
+	display: block;
+	position: absolute;
+	right: -10px;
+	top: 0;
+	animation: blink 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes blink {
+	from {
+		opacity: 100%;
+	}
+
+	to {
+		opacity: 0%;
+	}
+}
+
+.word.empty {
+	visibility: hidden;
+}
+
+.word.empty span::after {
+	visibility: visible;
+	right: 0;
+}
