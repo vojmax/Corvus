@@ -1,13 +1,19 @@
-import Link from "next/link";
 import React from "react";
+import ScrollLink from "./ScrollLink";
 
 function Logo() {
 	return (
-		<Link href="/" className="flex items-center text-dark dark:text-light">
-			<span className=" text-2xl font-bold">corvus</span>
-			<span className="text-highlight text-2xl font-bold ">.</span>
-			<span className=" text-2xl font-normal">design</span>
-		</Link>
+		<ScrollLink
+			href="#home"
+			className="flex items-center text-dark dark:text-light"
+			title={
+				<>
+					<span className=" text-2xl font-bold">VM</span>
+					<span className="text-highlight text-2xl font-bold ">.</span>
+					<span className=" text-2xl font-normal">design</span>
+				</>
+			}
+		/>
 	);
 }
 
